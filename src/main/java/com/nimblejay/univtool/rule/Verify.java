@@ -3,7 +3,7 @@ package com.nimblejay.univtool.rule;
 import com.nimblejay.univtool.enums.EnumType;
 
 /**
- *  万能校验类
+ *  正则校验类
  *
  */
 public final class Verify {
