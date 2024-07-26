@@ -67,7 +67,7 @@ public enum EnumType {
     /**
      * base64格式
      */
-    BASE64_FORMAT("13","^\\s*data:(?:[a-z]+\\/[a-z0-9-+.]+(?:;[a-z-]+=[a-z0-9-]+)?)?(?:;base64)?,([a-z0-9!$&',()*+;=\\-._~:@/?%\\s]*?)\\s*$","base64格式"),
+    BASE64_FORMAT("13","^\\s*data:(?:[a-z]+/[a-z0-9\\-+.]+(?:;[a-z\\-]+=[a-z0-9\\-]+)?)?(?:;base64)?,([a-z0-9!$&',()*+;=\\-._~:@/?%\\s]*?)\\s*$","base64格式"),
     /**
      * 数字/货币金额(支持负数，千分位分隔符)
      */
@@ -153,7 +153,7 @@ public enum EnumType {
      */
     DECIMAL("34","^\\d+\\.\\d+$","小数"),
     /**
-     *  小数
+     *  数字
      */
     DIGIT("35","^\\d{1,}$","数字"),
     /**
@@ -263,7 +263,7 @@ public enum EnumType {
     public static Boolean getResultByCode(String code,String str){
         if(StringUtils.isNotEmpty(code) && StringUtils.isNotEmpty(str)){
             EnumType e = getEnumByCode(code);
-            Pattern pattern = Pattern.compile(e.regex);
+            Pattern pattern = Pattern.compile(e.regex, Pattern.CASE_INSENSITIVE| Pattern.DOTALL | Pattern.MULTILINE);
             return pattern.matcher(str).matches();
         }else{
             return false;
