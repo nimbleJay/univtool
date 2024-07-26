@@ -2,8 +2,8 @@ package com.nimblejay.univtool.sutil;
 import java.util.*;
 
 /**
- * @Author: nimbleJay
  *  集合非空校验类
+ *
  */
 public final class CollectionUtil {
 

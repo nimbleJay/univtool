@@ -9,31 +9,25 @@ import java.time.temporal.TemporalAdjusters;
 import java.util.Date;
 
 /**
- * @Author: nimbleJay
  *  时间工具类
+ *
  */
 public class DateUtil {
     private static final DateTimeFormatter DEFAULT_FORMATTER = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss");
 
-    /**
-     * 获取当前日期时间
-     *
-     */
+    //获取当前日期时间
     public static LocalDateTime now() {
         return LocalDateTime.now();
     }
 
-    /**
-     * 获取当前日期
-     *
-     */
+    //获取当前日期
     public static LocalDate today() {
         return LocalDate.now();
     }
 
     /**
      * 获取当前时间
-     *
+     * @return
      */
     public static LocalTime currentTime() {
         return LocalTime.now();
@@ -43,7 +37,7 @@ public class DateUtil {
      * 将字符串转换为 LocalDate
      *
      * @param dateStr 时间字符串
-     * @return LocalDate
+     * @return localDate
      */
     public static LocalDate stringToLocalDate(String dateStr, String pattern) {
         DateTimeFormatter formatter = DateTimeFormatter.ofPattern(pattern);
@@ -55,7 +49,7 @@ public class DateUtil {
      *
      * @param dateStr 要转换的日期字符串
      * @param pattern 日期格式模式
-     * @return 转换后的 Date 对象
+     * @return Date
      * @throws ParseException 如果字符串无法解析为日期
      */
     public static Date stringToDate(String dateStr, String pattern) throws ParseException {
@@ -67,6 +61,7 @@ public class DateUtil {
      * 将字符串转换为 LocalDateTime
      *
      * @param dateTimeStr 时间字符串
+     * @param pattern 时间格式
      * @return LocalDateTime
      */
     public static LocalDateTime stringToLocalDateTime(String dateTimeStr, String pattern) {
@@ -78,6 +73,7 @@ public class DateUtil {
      * 将 LocalDate 转换为字符串
      *
      * @param date 时间字符串
+     * @param pattern 时间格式
      * @return String
      */
     public static String localDateToString(LocalDate date, String pattern) {
@@ -89,6 +85,7 @@ public class DateUtil {
      * 将 LocalDateTime 转换为字符串
      *
      * @param dateTime LocalDateTime格式的时间
+     * @param pattern 格式
      * @return String
      */
     public static String localDateTimeToString(LocalDateTime dateTime, String pattern) {
@@ -135,7 +132,7 @@ public class DateUtil {
      *
      * @param start  开始日期
      * @param end 结束日期
-     * @return long
+     * @return
      */
     public static long minutesBetween(LocalDateTime start, LocalDateTime end) {
         return ChronoUnit.MINUTES.between(start, end);
@@ -144,6 +141,7 @@ public class DateUtil {
     /**
      * 获取当前时间戳
      *
+     * @return long
      */
     public static long currentTimestamp() {
         return System.currentTimeMillis();

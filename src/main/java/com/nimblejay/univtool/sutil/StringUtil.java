@@ -5,15 +5,15 @@ import java.util.Map;
 import java.util.Set;
 
 /**
- * @Author: nimbleJay
  *  char校验工具类
+ *
  */
 public final class StringUtil {
 
     /**
      * char类型校验为空
      *
-     * @param cs 校验枚举码
+     * @param cs char字符串
      * @return boolean
      */
     public static boolean isEmpty(CharSequence cs) {
@@ -22,7 +22,7 @@ public final class StringUtil {
     /**
      * char类型校验不为空
      *
-     * @param cs
+     * @param cs char字符串
      * @return boolean
      */
     public static boolean isNotEmpty(CharSequence cs){
@@ -83,8 +83,8 @@ public final class StringUtil {
     /**
      * 匹配是否相同
      *
-     * @param cs1
-     * @param cs2
+     * @param cs1 char字符串1
+     * @param cs2 char字符串2
      * @return boolean
      */
     public static boolean equals(CharSequence cs1, CharSequence cs2) {
@@ -114,8 +114,8 @@ public final class StringUtil {
     /**
      * 比较
      *
-     * @param str1
-     * @param str2
+     * @param str1 字符串1
+     * @param str2 字符串2
      * @return boolean
      */
     public static int compare(String str1, String str2) {
