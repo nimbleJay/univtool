@@ -27,7 +27,7 @@ public enum EnumType {
     /**
      * 网址(url,支持端口和"?+参数"和”#+参数“)
      */
-    WEBSITE_PORT_PARAM("3","^(((ht|f)tps?):\\\\/\\\\/)?[\\\\w-]+(\\\\.[\\\\w-]+)+([\\\\w.,@?^=%&:/~+#-]*[\\\\w@?^=%&/~+#-])?$","网址(支持url,参数)"),
+    WEBSITE_PORT_PARAM("3","^(((ht|f)tps?):\\/\\/)?[\\w-]+(\\.[\\w-]+)+([\\w.,@?^=%&:/~+#-]*[\\w@?^=%&/~+#-])?$","网址(支持url,参数)"),
     /**
      * 社会统一信用代码
      */
@@ -53,7 +53,7 @@ public enum EnumType {
      */
     VIDEO_ADDR("9","^https?:\\/\\/(.+\\/)+.+(\\.(swf|avi|flv|mpg|rm|mov|wav|asf|3gp|mkv|rmvb|mp4))$","video连接地址"),
     /**
-     * video连接地址
+     * 图片链接地址
      */
     IMG_ADDR("10","^https?:\\/\\/(.+\\/)+.+(\\.(gif|png|jpg|jpeg|webp|svg|psd|bmp|tif))$","图片链接地址"),
     /**
