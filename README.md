@@ -13,7 +13,7 @@ https://github.com/nimbleJay/univtool.git
 <dependency><br>
      <groupId>io.github.nimblejay</groupId><br>
      <artifactId>univTool</artifactId><br>
-     <version>0.0.1-beta</version><br>
+     <version>0.0.3-beta</version><br>
 </dependency><br>
 ```
 ### java
